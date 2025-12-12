@@ -104,3 +104,15 @@ int main() {
     // 9. szachownica()
     m2.szachownica();
     wypisz_fragment(m2, "9. szachownica() [wzor 0 1 0 1...]");
+
+    // 10. przekatna()
+    m2.przekatna();
+    wypisz_fragment(m2, "10. przekatna() [1 na glownej osi]");
+
+    // 11. pod_przekatna()
+    m2.pod_przekatna();
+    wypisz_fragment(m2, "11. pod_przekatna() [1 ponizej osi]");
+
+    // 12. nad_przekatna()
+    m2.nad_przekatna();
+    wypisz_fragment(m2, "12. nad_przekatna() [1 powyzej osi]");
