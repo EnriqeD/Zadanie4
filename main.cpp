@@ -221,3 +221,19 @@ int main() {
 
     cout << "X (same 5), Y (same 5)" << endl;
     cout << "Czy X == Y? " << (X == Y ? "TAK (ok)" : "NIE (blad)") << endl;
+
+    Y += 1; // Y to teraz same 6
+    cout << "Zwiekszono Y o 1 (same 6)." << endl;
+    cout << "Czy X == Y? " << (X == Y ? "TAK (blad)" : "NIE (ok)") << endl;
+    cout << "Czy Y > X?  " << (Y > X ? "TAK (ok)" : "NIE (blad)") << endl;
+    cout << "Czy X < Y?  " << (X < Y ? "TAK (ok)" : "NIE (blad)") << endl;
+
+    cout << "\n--- 31. operator<< (prezentacja malej macierzy) ---" << endl;
+    matrix mala(4);
+    mala.szachownica();
+    cout << mala;
+
+    cout << "\n=== KONIEC TESTOW ===" << endl;
+
+    return 0;
+}
