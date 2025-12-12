@@ -141,3 +141,47 @@ int main() {
     m2.wiersz(2, t_diag.data()); // Wstawiamy do wiersza o indeksie 2 (trzeci)
     wypisz_fragment(m2, "16. wiersz(2, t) [trzeci wiersz wypelniony]");
 
+    // 17. dowroc() - Transpozycja
+    // Ustawiamy charakterystyczny układ: wiersz 0 = jedynki
+    matrix m_trans(N);
+    vector<int> jedynki(N, 1);
+    m_trans.wiersz(0, jedynki.data());
+
+    wypisz_fragment(m_trans, "17a. Przed odwroceniem (wiersz 0 to jedynki)");
+    m_trans.dowroc();
+    wypisz_fragment(m_trans, "17b. Po odwroceniu() (kolumna 0 to jedynki)");
+
+    matrix A(N), B(N);
+    A.przekatna(); // A ma 1 na przekątnej
+    B.alokuj(N);
+    B += 2;        // B ma wszędzie 2
+
+    // 18. Matrix + Matrix
+    matrix C = A + B;
+    wypisz_fragment(C, "18. A + B [przekatna=3, reszta=2]");
+
+    // 19. Matrix * Matrix
+    // A (jednostkowa) * B (same dwójki) = B (same dwójki)
+    matrix D = A * B;
+    wypisz_fragment(D, "19. A * B [M.Jednostkowa * SameDwójki = SameDwójki]");
+
+    // 20. Matrix + int
+    C = A + 100;
+    wypisz_fragment(C, "20. A + 100 [przekatna=101, reszta=100]");
+
+    // 21. Matrix * int
+    C = A * 5;
+    wypisz_fragment(C, "21. A * 5 [przekatna=5, reszta=0]");
+
+    // 22. Matrix - int
+    C = B - 1; // B to same 2
+    wypisz_fragment(C, "22. B(2) - 1 [same jedynki]");
+
+    // 23. int + Matrix
+    C = 10 + A;
+    wypisz_fragment(C, "23. 10 + A [przekatna=11, reszta=10]");
+
+    // 24. int * Matrix
+    C = 3 * A;
+    wypisz_fragment(C, "24. 3 * A [przekatna=3, reszta=0]");
+
