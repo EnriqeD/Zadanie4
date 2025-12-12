@@ -116,3 +116,18 @@ int main() {
     // 12. nad_przekatna()
     m2.nad_przekatna();
     wypisz_fragment(m2, "12. nad_przekatna() [1 powyzej osi]");
+
+    // 13. diagonalna(int* t)
+    // Tworzymy tablicę wartości dla przekątnej (10, 20, 30...)
+    vector<int> t_diag(N);
+    for (int i = 0; i < N; ++i) t_diag[i] = (i + 1) * 10;
+
+    m2.diagonalna(t_diag.data());
+    wypisz_fragment(m2, "13. diagonalna(t) [10, 20, 30...]");
+
+    // 14. diagonalna_k(k, t)
+    m2.diagonalna_k(2, t_diag.data());
+    wypisz_fragment(m2, "14. diagonalna_k(2) [przesunieta w gore o 2]");
+
+    m2.diagonalna_k(-3, t_diag.data());
+    wypisz_fragment(m2, "14b. diagonalna_k(-3) [przesunieta w dol o 3]");
