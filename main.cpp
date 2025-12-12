@@ -66,3 +66,7 @@ int main() {
     matrix m1;
     m1.alokuj(N);
     wypisz_fragment(m1, "1. Konstruktor domyslny + alokuj(N) [powinny byc 0]");
+
+    // 2. Konstruktor (int)
+    matrix m2(N);
+    wypisz_fragment(m2, "2. Konstruktor(int) [powinny byc 0]");
