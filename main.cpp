@@ -85,3 +85,13 @@ int main() {
     cout << "\n--- 5. Test wstaw() i pokaz() ---" << endl;
     cout << "Wartosc pod (0,0): " << m1.pokaz(0, 0) << " (oczekiwane 999)" << endl;
     cout << "Wartosc pod (1,1): " << m1.pokaz(1, 1) << " (oczekiwane 777)" << endl;
+
+    // 6. Realokacja (zmniejszenie/zwiększenie) - test logiczny metody alokuj
+    m1.alokuj(N + 5); // Zwiększenie
+    cout << "\n--- 6. Test ponownej alokacji ---" << endl;
+    cout << "Nowy rozmiar m1: " << m1.pobierz_rozmiar() << " (oczekiwane 35)" << endl;
+    m1.alokuj(N); // Powrót do N
+
+    // 7. losuj()
+    m1.losuj();
+    wypisz_fragment(m1, "7. losuj() [wszystkie elementy losowe]");
