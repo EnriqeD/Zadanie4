@@ -185,3 +185,26 @@ int main() {
     C = 3 * A;
     wypisz_fragment(C, "24. 3 * A [przekatna=3, reszta=0]");
 
+    // 25. int - Matrix
+   // 10 - A(przekątna 1, reszta 0) -> przekątna 9, reszta 10
+    C = 10 - A;
+    wypisz_fragment(C, "25. 10 - A [przekatna=9, reszta=10]");
+
+    // 26. operator++ (post)
+    C = A; // reset do jednostkowej
+    C++;
+    wypisz_fragment(C, "26. A++ [przekatna=2, reszta=1]");
+
+    // 27. operator-- (post)
+    C = A;
+    C--;
+    wypisz_fragment(C, "27. A-- [przekatna=0, reszta=-1]");
+
+    // 28. operatory +=, -=, *=
+    matrix E(N);
+    E += 10;
+    wypisz_fragment(E, "28a. E += 10 [same 10]");
+    E -= 2;
+    wypisz_fragment(E, "28b. E -= 2 [same 8]");
+    E *= 2;
+    wypisz_fragment(E, "28c. E *= 2 [same 16]");
