@@ -74,3 +74,14 @@ int main() {
     // 3. Konstruktor (int, int*) - wczytanie z tabeli
     matrix m3(N, bufor.data());
     wypisz_fragment(m3, "3. Konstruktor(int, int*) [sekwencja liczb]");
+
+    // 4. Konstruktor kopiujący
+    matrix m_copy(m3);
+    wypisz_fragment(m_copy, "4. Konstruktor kopiujacy [kopia powyzszego]");
+
+    // 5. wstaw() i pokaz()
+    m1.wstaw(0, 0, 999);
+    m1.wstaw(1, 1, 777);
+    cout << "\n--- 5. Test wstaw() i pokaz() ---" << endl;
+    cout << "Wartosc pod (0,0): " << m1.pokaz(0, 0) << " (oczekiwane 999)" << endl;
+    cout << "Wartosc pod (1,1): " << m1.pokaz(1, 1) << " (oczekiwane 777)" << endl;
