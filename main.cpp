@@ -70,3 +70,7 @@ int main() {
     // 2. Konstruktor (int)
     matrix m2(N);
     wypisz_fragment(m2, "2. Konstruktor(int) [powinny byc 0]");
+
+    // 3. Konstruktor (int, int*) - wczytanie z tabeli
+    matrix m3(N, bufor.data());
+    wypisz_fragment(m3, "3. Konstruktor(int, int*) [sekwencja liczb]");
