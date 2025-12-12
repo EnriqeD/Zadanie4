@@ -208,3 +208,16 @@ int main() {
     wypisz_fragment(E, "28b. E -= 2 [same 8]");
     E *= 2;
     wypisz_fragment(E, "28c. E *= 2 [same 16]");
+
+    // 29. operator()(double)
+    E.alokuj(N); // zerowanie
+    E(3.14); // dodaje część całkowitą (3)
+    wypisz_fragment(E, "29. E(3.14) [dodaje 3]");
+
+    cout << "\n--- 30. Testy porownania ---" << endl;
+    matrix X(N), Y(N);
+    X += 5;
+    Y += 5;
+
+    cout << "X (same 5), Y (same 5)" << endl;
+    cout << "Czy X == Y? " << (X == Y ? "TAK (ok)" : "NIE (blad)") << endl;
