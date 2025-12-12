@@ -95,3 +95,12 @@ int main() {
     // 7. losuj()
     m1.losuj();
     wypisz_fragment(m1, "7. losuj() [wszystkie elementy losowe]");
+
+    // 8. losuj(x) - losuje x elementów, reszta bez zmian
+    matrix m_czysta(N); // same zera
+    m_czysta.losuj(10); // wstawia 10 losowych cyfr w losowe miejsca
+    wypisz_fragment(m_czysta, "8. losuj(10) [tylko 10 elementow niezerowych]");
+
+    // 9. szachownica()
+    m2.szachownica();
+    wypisz_fragment(m2, "9. szachownica() [wzor 0 1 0 1...]");
