@@ -131,3 +131,13 @@ int main() {
 
     m2.diagonalna_k(-3, t_diag.data());
     wypisz_fragment(m2, "14b. diagonalna_k(-3) [przesunieta w dol o 3]");
+
+    // 15. kolumna(x, t)
+    m2.alokuj(N); // reset
+    m2.kolumna(1, t_diag.data()); // Wstawiamy do kolumny o indeksie 1 (drugiej)
+    wypisz_fragment(m2, "15. kolumna(1, t) [druga kolumna wypelniona]");
+
+    // 16. wiersz(y, t)
+    m2.wiersz(2, t_diag.data()); // Wstawiamy do wiersza o indeksie 2 (trzeci)
+    wypisz_fragment(m2, "16. wiersz(2, t) [trzeci wiersz wypelniony]");
+
